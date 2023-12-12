@@ -1,4 +1,5 @@
 import React from "react";
+import '../stlyes/Note.css';
 
 function Note({ note, selectNote, currentNote }) {
     console.log("current : ", currentNote)

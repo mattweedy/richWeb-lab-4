@@ -59,10 +59,10 @@ label {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.note {
+/* .note {
   font-size: 1.2em;
   min-height: 12px;
   max-height: auto;
@@ -70,14 +70,12 @@ label {
   padding: 8px;
   margin-bottom: 12px;
   overflow: auto;
-  overflow-wrap: break-word;
   border: 2px solid black;
-  border-radius: 6px;
 }
 
 .note:hover {
   background-color: #b6b6b6;
-}
+} */
 
 #notes {
   padding: 15px;

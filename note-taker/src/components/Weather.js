@@ -9,20 +9,19 @@ const WeatherCard = () => {
 
     useEffect(() => {
         if (city) {
-          const fetchData = async () => {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8c0597e030b36e3a2aeb27ce07b090d0`);
-            const data = await response.json();
-            setWeatherData(data);
-          };
-          fetchData();
+            const fetchData = async () => {
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8c0597e030b36e3a2aeb27ce07b090d0`);
+                const data = await response.json();
+                setWeatherData(data);
+            };
+            fetchData();
         }
-      }, [city]);
+    }, [city]);
 
-      return (
+    return (
         <div>
             <h2>Search City for Weather</h2>
-            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} style={{width: '100%', height: '30px', fontSize: '16px', backgroundColor: '#f0f0f0', color: '#333', border: '1px solid #ccc'}} />
-
+            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} style={{ width: '100%', height: '30px', fontSize: '16px', backgroundColor: '#f0f0f0', color: '#333', border: '1px solid #ccc' }} />
 
             {(typeof weatherData.main != 'undefined') ? (
                 <Card className="horizontal-card">
@@ -37,7 +36,7 @@ const WeatherCard = () => {
                         <p>Humidity: {weatherData.main.humidity} %</p>
                     </Card.Content>
                 </Card>
-            ): (
+            ) : (
                 <div></div>
             )}
         </div>

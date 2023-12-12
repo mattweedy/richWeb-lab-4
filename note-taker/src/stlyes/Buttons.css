@@ -1,0 +1,16 @@
+#notes-buttons {
+    padding: 5px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 5px;
+  }
+  
+#notes-buttons button {
+    width: 100%;
+    padding: 15px;
+}
+
+#notes-buttons button:hover {
+    fill-opacity: 50%;
+}

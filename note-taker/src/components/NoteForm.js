@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import '../stlyes/Buttons.css';
+// import '../stlyes/App.css'
 
 function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }) {
     const[noteText, setNoteText] = useState("");
@@ -22,8 +24,15 @@ function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }
                 value={noteText}
                 onChange={(e) => setNoteText(e.target.value)}
             />
+            {/* buttons */}
+            <div id="notes-buttons">
+                <button type="submit">Add Note</button>
+                <button type="submit" disabled={!currentNote} >Edit Note</button>
+                <button type="button" onClick={deleteNote} disabled={!currentNote} >Delete Note</button>
+            </div>
             {/* colour select */}
-            <select 
+            <select
+            id="notes-colour-select"
             value={noteColour} 
             onChange={(e) => setNoteColour(e.target.value)}
             >
@@ -31,10 +40,6 @@ function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }
                 <option value={"green"}>Green</option>
                 <option value={"blue"}>Blue</option>
             </select>
-            {/* buttons */}
-            <button type="submit">Add Note</button>
-            <button type="submit" disabled={!currentNote}>Edit Note</button>
-            <button type="button" onClick={deleteNote} disabled={!currentNote}>Delete Note</button>
         </form>
     )
 }
