@@ -1,11 +1,24 @@
+:root {
+  --light-background: #ffffff;
+  --dark-background: #282c34;
+}
+
 .App.light {
-  background-color: #ffffff;
+  background-color: var(--light-background);
   color: black;
 }
 
 .App.dark {
-  background-color: #282c34;
+  background-color: var(--dark-background);
   color: #ffffff;
+}
+
+body.light {
+  background-color: var(--light-background);
+}
+
+body.dark {
+  background-color: var(--dark-background);
 }
 
 .App {
@@ -42,6 +55,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -52,10 +66,13 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-header {
+.header {
   border-bottom: 2px solid black;
   background-color: rgb(255, 121, 121);
   padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {

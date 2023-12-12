@@ -9,7 +9,8 @@ function NoteList({ notes, selectNote, searchQuery, setSearchQuery }) {
         <div className="note-list">
             {/* search bar */}
             <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="search..."/>
-
+            <br></br>
+            <br></br>
             {/* render filtered notes */}
             {filteredNotes.map((note) => (
                 <Note key={note.id} note={note} selectNote={selectNote} />

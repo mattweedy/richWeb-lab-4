@@ -1,3 +1,18 @@
+:root {
+    --light-background: #ffffff;
+    --dark-background: #282c34;
+}
+
+.weather-card.light .horizontal-card {
+    background-color: var(--light-background);
+    color: black;
+}
+
+.weather-card.dark .horizontal-card {
+    background-color: var(--dark-background);
+    color: #ffffff;
+}
+
 .horizontal-card {
     display: block;
     max-width: 100%;

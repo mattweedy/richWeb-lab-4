@@ -4,7 +4,7 @@ import moment from 'moment'
 import '../stlyes/WeatherCard.css';
 import '../stlyes/SearchBar.css';
 
-const WeatherCard = () => {
+const WeatherCard = ({ theme }) => {
     const [city, setCity] = useState("");
     const [weatherData, setWeatherData] = useState({});
 
@@ -20,15 +20,14 @@ const WeatherCard = () => {
     }, [city]);
 
     return (
-        <div>
+        <div className={`weather-card ${theme}`}>
             <h2>Search City for Weather</h2>
-            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="search..."/>
 
             {(typeof weatherData.main != 'undefined') ? (
                 <Card className="horizontal-card">
                     <Card.Content>
-                        <Card.Header className="header">{weatherData.name}</Card.Header>
-                        <br></br>
+                        <h2>{weatherData.name}</h2>
                         <p>Day: {moment().format('dddd')}</p>
                         <p>Date: {moment().format('LL')}</p>
                         <p>Temperature: {Math.round(weatherData.main.temp - 273.15)}°C</p>
