@@ -32,9 +32,6 @@ function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }
                 <option value={"blue"}>Blue</option>
             </select>
             {/* buttons */}
-            {/* <button type="submit">{currentNote ? "Edit Note" : "Add Note"}</button>
-            <button type="submit">{"Add Note"}</button>
-            {currentNote && <button type="button" onClick={deleteNote}>Delete Note</button>} */}
             <button type="submit">Add Note</button>
             <button type="submit" disabled={!currentNote}>Edit Note</button>
             <button type="button" onClick={deleteNote} disabled={!currentNote}>Delete Note</button>

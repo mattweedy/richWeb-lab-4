@@ -4,7 +4,6 @@ function Note({ note, selectNote, currentNote }) {
     console.log("current : ", currentNote)
     return (
         <div 
-        // className={`note ${currentNote === note ? 'selected' : ''}`}
         className="note"
         style={{backgroundColor: note.color}} 
         onClick={() => selectNote(note)}
