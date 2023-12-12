@@ -59,7 +59,7 @@ label {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .note {
@@ -70,7 +70,9 @@ label {
   padding: 8px;
   margin-bottom: 12px;
   overflow: auto;
+  overflow-wrap: break-word;
   border: 2px solid black;
+  border-radius: 6px;
 }
 
 .note:hover {

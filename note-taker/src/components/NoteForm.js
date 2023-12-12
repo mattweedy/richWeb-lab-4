@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NoteForm({ addNote, editNote, deleteNote, currentNote }) {
+function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }) {
     const[noteText, setNoteText] = useState("");
     const[noteColour, setNoteColour] = useState("red");
 
@@ -12,6 +12,7 @@ function NoteForm({ addNote, editNote, deleteNote, currentNote }) {
             addNote(noteText, noteColour);
         }
         setNoteText("");
+        setCurrentNote(null);
     };
 
     return (
@@ -22,14 +23,21 @@ function NoteForm({ addNote, editNote, deleteNote, currentNote }) {
                 onChange={(e) => setNoteText(e.target.value)}
             />
             {/* colour select */}
-            <select value={noteColour} onChange={(e) => setNoteColour(e.target.value)}>
+            <select 
+            value={noteColour} 
+            onChange={(e) => setNoteColour(e.target.value)}
+            >
                 <option value={"red"}>Red</option>
                 <option value={"green"}>Green</option>
                 <option value={"blue"}>Blue</option>
             </select>
             {/* buttons */}
-            <button type="submit">{currentNote ? "Edit Note" : "Add Note"}</button>
-            {currentNote && <button type="button" onClick={deleteNote}>Delete Note</button>}
+            {/* <button type="submit">{currentNote ? "Edit Note" : "Add Note"}</button>
+            <button type="submit">{"Add Note"}</button>
+            {currentNote && <button type="button" onClick={deleteNote}>Delete Note</button>} */}
+            <button type="submit">Add Note</button>
+            <button type="submit" disabled={!currentNote}>Edit Note</button>
+            <button type="button" onClick={deleteNote} disabled={!currentNote}>Delete Note</button>
         </form>
     )
 }

@@ -47,7 +47,7 @@ const App = () => {
             </div>
 
             <div id="notes-new">
-                <NoteForm addNote={addNote} />
+                <NoteForm addNote={addNote} editNote={editNote} deleteNote={deleteNote} currentNote={currentNote} setCurrentNote={setCurrentNote} />
             </div>
         </div>
     );
