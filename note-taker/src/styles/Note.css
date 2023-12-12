@@ -13,3 +13,14 @@
 .note:hover {
     background-color: #b6b6b6;
 }
+
+.note-list-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-list input,
+.note-list button {
+  margin: 0.5em;
+}

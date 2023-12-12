@@ -10,6 +10,7 @@ import Weather from './components/Weather';
 //       - users can search through notes
 //       - search automatically filters notes
 //       - displays message if no notes stored and removes search bar
+//       - button to sort notes by newest/oldest
 
 const App = () => {
     const [notes, setNotes] = useState([]);
@@ -67,6 +68,7 @@ const App = () => {
                     <span className="slider round"></span>
                 </label>
             </header>
+
             <div className="grid">
                 <div id="notes">
                     <h1 id="stored-notes-title">Stored notes</h1>
