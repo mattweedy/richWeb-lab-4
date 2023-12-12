@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Card } from 'semantic-ui-react';
 import moment from 'moment'
-import '../stlyes/WeatherCard.css';
-import '../stlyes/SearchBar.css';
+import '../styles/WeatherCard.css';
+import '../styles/SearchBar.css';
 
 const WeatherCard = ({ theme }) => {
     const [city, setCity] = useState("");

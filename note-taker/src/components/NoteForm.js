@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import '../stlyes/Buttons.css';
-// import '../stlyes/App.css'
+import '../styles/Buttons.css';
+// import '../styles/App.css'
 
 function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }) {
     const [noteText, setNoteText] = useState("");

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './stlyes/App.css';
-import './stlyes/ToggleButton.css';
+import './styles/App.css';
+import './styles/ToggleButton.css';
 import NoteList from './components/NoteList';
 import NoteForm from './components/NoteForm';
 import Weather from './components/Weather';
