@@ -8,7 +8,7 @@ function NoteList({ notes, selectNote, searchQuery, setSearchQuery }) {
     return (
         <div className="note-list">
             {/* search bar */}
-            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="search..."/>
+            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="search..." />
             <br></br>
             <br></br>
             {/* render filtered notes */}

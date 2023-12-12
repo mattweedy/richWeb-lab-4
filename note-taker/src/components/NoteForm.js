@@ -3,8 +3,8 @@ import '../stlyes/Buttons.css';
 // import '../stlyes/App.css'
 
 function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }) {
-    const[noteText, setNoteText] = useState("");
-    const[noteColour, setNoteColour] = useState("red");
+    const [noteText, setNoteText] = useState("");
+    const [noteColour, setNoteColour] = useState("red");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -32,9 +32,9 @@ function NoteForm({ addNote, editNote, deleteNote, currentNote, setCurrentNote }
             </div>
             {/* colour select */}
             <select
-            id="notes-colour-select"
-            value={noteColour} 
-            onChange={(e) => setNoteColour(e.target.value)}
+                id="notes-colour-select"
+                value={noteColour}
+                onChange={(e) => setNoteColour(e.target.value)}
             >
                 <option value={"red"}>Red</option>
                 <option value={"green"}>Green</option>

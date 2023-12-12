@@ -22,7 +22,7 @@ const WeatherCard = ({ theme }) => {
     return (
         <div className={`weather-card ${theme}`}>
             <h2>Search City for Weather</h2>
-            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="search..."/>
+            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="search..." />
 
             {(typeof weatherData.main != 'undefined') ? (
                 <Card className="horizontal-card">

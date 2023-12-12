@@ -6,8 +6,10 @@ import NoteForm from './components/NoteForm';
 import Weather from './components/Weather';
 
 // extra functionality:
-//       - button for swapping themes
-//       - users can search to filter notes
+//       - button for swapping themes, including imported components
+//       - users can search through notes
+//       - search automatically filters notes
+//       - displays message if no notes stored and removes search bar
 
 const App = () => {
     const [notes, setNotes] = useState([]);
@@ -57,7 +59,6 @@ const App = () => {
     }
 
     return (
-
         <div className={`App ${theme}`}>
             <header className="header">
                 <h1>React Note Taker</h1>
