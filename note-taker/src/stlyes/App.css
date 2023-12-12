@@ -1,3 +1,13 @@
+.App.light {
+  background-color: #ffffff;
+  color: black;
+}
+
+.App.dark {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
 .App {
   text-align: center;
 }
@@ -62,21 +72,6 @@ label {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* .note {
-  font-size: 1.2em;
-  min-height: 12px;
-  max-height: auto;
-  max-width: 100%;
-  padding: 8px;
-  margin-bottom: 12px;
-  overflow: auto;
-  border: 2px solid black;
-}
-
-.note:hover {
-  background-color: #b6b6b6;
-} */
-
 #notes {
   padding: 15px;
 }
@@ -116,7 +111,6 @@ label {
 
 #stored-notes-title {
   font-size: 1.75em;
-  text-decoration: underline;
   text-align: center;
 }
 

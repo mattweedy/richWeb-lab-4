@@ -11,6 +11,27 @@ import Weather from './components/Weather';
 const App = () => {
     const [notes, setNotes] = useState([]);
     const [currentNote, setCurrentNote] = useState(null);
+    const [theme, setTheme] = useState('light');
+    const [searchQuery, setSearchQuery] = useState("")
+
+    useEffect(() => {
+        const checkTheme = () => {
+            const currentTime = new Date();
+            const switchTime = new Date();
+            switchTime.setHours(21, 5, 0); // set time to switch
+            if (currentTime >= switchTime) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        };
+
+        // check every minute
+        const intervalID = setInterval(checkTheme, 60000);
+
+        // clean up interval on unmount
+        return () => clearInterval(intervalID);
+    }, []);
 
     const addNote = (noteText, noteColour) => {
         if (noteText.trim() !== "") {
@@ -46,25 +67,25 @@ const App = () => {
 
     return (
         
-        <div>
-            <header>
-                <h1>React Note Taker</h1>
-            </header>
-            <div className="grid">
-                <div id="notes">
-                    <h1 id="stored-notes-title">Stored notes</h1>
-                    <NoteList notes={notes} selectNote={selectNote} />
+        <div className={`App ${theme}`}>
+            <body>
+                <header>
+                    <h1>React Note Taker</h1>
+                </header>
+                <div className="grid">
+                    <div id="notes">
+                        <h1 id="stored-notes-title">Stored notes</h1>
+                        <NoteList notes={notes} selectNote={selectNote} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+                    </div>
+
+                    <div id="notes-new">
+                        <NoteForm addNote={addNote} editNote={editNote} deleteNote={deleteNote} currentNote={currentNote} setCurrentNote={setCurrentNote} />
+                        <br></br>
+                        <Weather></Weather>
+                    </div>
+
                 </div>
-
-                <div id="notes-new">
-                    <NoteForm addNote={addNote} editNote={editNote} deleteNote={deleteNote} currentNote={currentNote} setCurrentNote={setCurrentNote} />
-
-                    <br></br>
-
-                    <Weather></Weather>
-                </div>
-
-            </div>
+            </body>
         </div>
     );
 }

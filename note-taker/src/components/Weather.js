@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card } from 'semantic-ui-react';
 import moment from 'moment'
 import '../stlyes/WeatherCard.css';
+import '../stlyes/SearchBar.css';
 
 const WeatherCard = () => {
     const [city, setCity] = useState("");
@@ -21,7 +22,7 @@ const WeatherCard = () => {
     return (
         <div>
             <h2>Search City for Weather</h2>
-            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} style={{ width: '100%', height: '30px', fontSize: '16px', backgroundColor: '#f0f0f0', color: '#333', border: '1px solid #ccc' }} />
+            <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
 
             {(typeof weatherData.main != 'undefined') ? (
                 <Card className="horizontal-card">
