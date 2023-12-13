@@ -22,20 +22,20 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
     this.state = { count: 0 };
-  }
+    }
 
-  increment = () => {
+    increment = () => {
         this.setState({ count: this.state.count + 1 });
-  };
+    };
 
-  render() {
-      return (
-        <div>
-            <p>Count: {this.state.count}</p>
-            <button onClick={this.increment}>Increment</button>
-        </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <p>Count: {this.state.count}</p>
+                <button onClick={this.increment}>Increment</button>
+            </div>
+        );
+    }
 }
 ```
 The state is an instance of React Component Class and is an object of a set of observable properties. Here the state object is initialised with a count property of 0. When the `<Button>` is pressed, the `increment()` method is called, which takes the state and increases it by 1.
