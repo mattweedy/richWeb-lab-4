@@ -94,4 +94,5 @@ Here we can see a `<div>` element with a defined width of `200px`. It has `12px`
 
 ## 5. Detail how the browser loads and bootstraps a rich web applicaiton from an initial URL.
 When a URL is entered into a browser, the IP address is resolved via DNS and sends a HTTP request to the server. A HTML file is sent in response by the server, which gets parsed by the browser. This parsing constructs the DOM (Document Object Model) tree. While the HTML is being parsed, the browser will request for any additional resources such as CSS or JavaScript files or images/videos. The browser then renders the page when all of these are loaded. For rich web apps, Javascript manipulates the DOM to make the site interactive.
+
 The bootstrapping process for a rich web app is when it is initialising and preparing to run. The `<App>` component is rendered as a DOM element and is responsible for rendering the rest of the application. This involves fetching any data required, loading and rendering components and routing. Bootstrapping is the in-between for static resources from the server, and the interactive, dynamic frontend.
