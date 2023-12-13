@@ -7,14 +7,14 @@ Props are properties, which are immutable components that are read-only and are 
 // passing the prop
 <NoteList notes="bacon, egg, cheese" />
 ```
-Here `notes` is a prop being passed to the <NoteList> component
+Here `notes` is a prop being passed to the `<NoteList>` component
 
 ```js
 function NoteList(props) {
     return <p>Buy : {props.notes}</p>;
 }
 ```
-This is how it looks when the <NoteList> component uses the props
+This is how it looks when the `<NoteList>` component uses the props
 
 State is managed by the component itself, but can still be passed as a prop from parent to child. When a change is made to a state, the component will be re-rendered
 ```js
@@ -38,7 +38,7 @@ class Counter extends React.Component {
   }
 }
 ```
-The state is an instance of React Component Class and is an object of a set of observable properties. Here the state object is initialised with a count property of 0. When the <Button> is pressed, the `increment()` method is called, which takes the state and increases it by 1.
+The state is an instance of React Component Class and is an object of a set of observable properties. Here the state object is initialised with a count property of 0. When the `<Button>` is pressed, the `increment()` method is called, which takes the state and increases it by 1.
 
 Props get passed to components, states are managed within components like variables.
 
@@ -90,8 +90,8 @@ div {
     margin: 10px;
 }
 ```
-Here we can see a <div> element with a defined width of `200px`. It has `12px` of padding around its content, but still in between the content and the border. The border is a solid black line `2px` thick. The margin property adds `10px` of space outside the element's border.
+Here we can see a `<div>` element with a defined width of `200px`. It has `12px` of padding around its content, but still in between the content and the border. The border is a solid black line `2px` thick. The margin property adds `10px` of space outside the element's border.
 
 ## 5. Detail how the browser loads and bootstraps a rich web applicaiton from an initial URL.
 When a URL is entered into a browser, the IP address is resolved via DNS and sends a HTTP request to the server. A HTML file is sent in response by the server, which gets parsed by the browser. This parsing constructs the DOM (Document Object Model) tree. While the HTML is being parsed, the browser will request for any additional resources such as CSS or JavaScript files or images/videos. The browser then renders the page when all of these are loaded. For rich web apps, Javascript manipulates the DOM to make the site interactive.
-The bootstrapping process for a rich web app is when it is initialising and preparing to run. The <App> component is rendered as a DOM element and is responsible for rendering the rest of the application. This involves fetching any data required, loading and rendering components and routing. Bootstrapping is the in-between for static resources from the server, and the interactive, dynamic frontend.
+The bootstrapping process for a rich web app is when it is initialising and preparing to run. The `<App>` component is rendered as a DOM element and is responsible for rendering the rest of the application. This involves fetching any data required, loading and rendering components and routing. Bootstrapping is the in-between for static resources from the server, and the interactive, dynamic frontend.
